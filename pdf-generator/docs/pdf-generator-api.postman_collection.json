@@ -1,0 +1,28 @@
+{
+  "info": {
+    "name": "PDF Generator API",
+    "description": "API for generating and managing PDF documents",
+    "version": "1.0.0",
+    "schema": ""
+  },
+  "item": [
+    {
+      "name": "Generate PDF",
+      "request": {
+        "url": "http://localhost:8080/api/pdf/generate",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"seller\": \"XYZ Pvt. Ltd.\",\n    \"sellerGstin\": \"29AABBCCDD121ZD\",\n    \"sellerAddress\": \"New Delhi, India\",\n    \"buyer\": \"Vedant Computers\",\n    \"buyerGstin\": \"29AABBCCDD131ZD\",\n    \"buyerAddress\": \"New Delhi, India\",\n    \"items\": [\n        {\n            \"name\": \"Product 1\",\n            \"quantity\": \"12 Nos\",\n            \"rate\": 123.00,\n            \"amount\": 1476.00\n        }\n    ]\n}"
+        }
+      },
+      "response": []
+    }
+  ]
+}
